@@ -19,7 +19,7 @@ url.txt: passwd.txt $(ENVDEP)
 	echo "$(ENVHASH)" > "$(ENVHASH_FILE)"
 
 passwd.txt:
-	pwgen 8 1 > $@
+	pwgen 16 1 > $@
 
 .PHONY: force-rebuild
 force-rebuild:
